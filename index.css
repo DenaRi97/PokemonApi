@@ -7,8 +7,7 @@ body {
       rgba(182, 216, 242, 1) 82%
     );
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-family: "Oswald", sans-serif;
+    font-family: Haettenschweiler, sans-serif;
   }
   
   h1 {
@@ -102,3 +101,36 @@ body {
     margin-right: auto;
     margin-bottom: 50px;
   }
+
+  .pages{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    /* background-color: brown; */
+    width: 100%;
+    padding: 1rem;
+  }
+  .page-item{
+    list-style: none;
+    background-color: blue;
+    padding-inline: 2rem;
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 15px;
+    cursor:pointer;
+  }
+a{
+    color: black;
+}
+
+a:visited{
+    color: red;
+
+}
+a:hover{
+    color: white;
+}
+a:active{
+
+}

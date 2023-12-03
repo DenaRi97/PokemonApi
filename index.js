@@ -1,5 +1,29 @@
 //Llamando al DOM
 const pokeContainer = document.querySelector(".pokemon-container")
+//Seleccionamos los botones para los listeners
+const previous = document.querySelector("#previous")
+const next = document.querySelector("#next")
+//Denominamos el offset(por tandas) y el limit (por página). Al darle 1 al offset se salta el primero de la tanda, al hacerlos bucle es como sumar "20 + siguientes20"
+let offset = 1
+let limit = 8
+
+//Event listeners
+//offset to make sure it changes along the list
+previous.addEventListener('click', () => {
+    if (offset != 1){
+        offset -= 9
+        removeChildNodes(pokeContainer)
+        fetchPokemons(offset, limit)
+    }
+
+})
+next.addEventListener('click', () => {
+    offset += 9
+    removeChildNodes(pokeContainer)
+    fetchPokemons(offset, limit)
+
+})
+
 //Funcion para buscar objeto concreto en el json
 function fetchPoke(id) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
@@ -12,8 +36,8 @@ function fetchPoke(id) {
 fetchPoke(1) //Pintar en consola objeto que he buscado
 
 //Función que va a buscar los objetos en el json
-function fetchPokemons(number) {
-    for (let i = 1; i <= number; i++) { //Bucle usando funcion singular anterior
+function fetchPokemons(offset, limit) {  //al sustituir todos los number por offset y limit hace que cicle entre todos los items en vez de siempre los mismos. Estan a 20 los dos en el api, pueden variar.
+    for (let i = offset; i <= offset + limit; i++) { //Bucle usando funcion singular anterior
         fetchPoke(i)
     }
 }
@@ -50,9 +74,18 @@ function createPoke(pokemon) {
     pokeContainer.appendChild(card)
 
 }
+//Remover todos los elementos dentro de otro elemento(removeChildNodes)
+//En js no se puede eliminar directamente, hay que deshacerse del parent
+//Bucle, del parent(contenedor de todos los elementos), while ese elemento tenga un first child
+//Parent y firstChild definidos en eventlistener
+function removeChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild)
+    }
+} //Mientras halla tarjetas en el contenedor, las va a quitar de una en una hasta que no queden
 
 // Llamada a la función fetchPokemons
-fetchPokemons(9)
+fetchPokemons(offset, limit)
  
 
 
