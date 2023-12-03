@@ -18,7 +18,7 @@ function fetchPokemons(number) {
     }
 }
 
-//Funcion para representar los ojbjetos del json
+//Funcion para representar los objetos del json
 function createPoke(pokemon) {
     // Constante que va a crear lista en tarjetas de los elementos a llamar y las va acolocar en divs
     const card = document.createElement('div')
@@ -51,9 +51,9 @@ function createPoke(pokemon) {
 
 }
 
+// Llamada a la función fetchPokemons
 fetchPokemons(9)
-
-
+ 
 
 
 
