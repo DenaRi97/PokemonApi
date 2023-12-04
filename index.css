@@ -1,18 +1,18 @@
 body {
     padding: 0;
     margin-inline: 1vw;
+    font-family: Haettenschweiler, sans-serif;
     box-sizing: border-box; 
     background: rgb(37,89,164);
     background: radial-gradient(circle, rgba(37,89,164,1) 0%, rgba(124,176,255,1) 40%, rgba(170,204,255,1) 60%, rgba(255,255,255,1) 89%);
     text-align: center;
-    font-family: Haettenschweiler, sans-serif;
   }
   /*---Header---*/
   h1 {
-    color: white;
+    color: rgb(202, 82, 82);
   }
   h2{
-    color: wheat;
+    color: rgb(30, 30, 30);
     font-size: 18px;
   }
   header{
@@ -31,7 +31,7 @@ body {
     gap: 1rem;
   }
   .tittle img{
-    width: 8%;
+    width: 9%;
   }
 /*--- Define a CSS keyframe animation named 'spin'---*/
 @keyframes spin {
@@ -64,7 +64,7 @@ body {
   .pokemon-block-back {
     border-radius: 10px;
     padding: 10px;
-    background-color: white;
+    background-color: rgb(245, 245, 245);
   }
   
   .img-container {
@@ -133,34 +133,46 @@ body {
     flex-direction: row;
     justify-content: center;
     gap: 2rem;
-    /* background-color: brown; */
     width: 100%;
     padding: 1rem;
+    align-items: center;
   }
   .page-item{
     list-style: none;
-    background-color: blue;
+    background-color: rgba(213, 0, 0, 0.674);
     padding-inline: 2rem;
-    padding: 1rem 2rem 1rem 2rem;
-    border-radius: 15px;
-    cursor:pointer;
+    padding: 1% 3% 1% 3%;
+    border-radius: 14px;
+    height: 15%;
+    cursor: pointer;
   }
 
   #spin-mew{
-    width: 10%;
+    width: 5rem;
   }
 
 a{
     color: black;
 }
-
-a:visited{
-    color: red;
-
-}
 a:hover{
     color: white;
 }
-a:active{
 
+/*---RESPONSIVE-----*/
+@media only screen and (max-width: 550px) {
+  body {
+    margin-inline: 5%;
+  }
+
+  header {
+    margin-inline: 10%;
+  }
+
+  .pokemon-container {
+    grid-template-columns: 1fr;
+  }
+
+  .pages {
+    flex-direction: column;
+  }
 }
