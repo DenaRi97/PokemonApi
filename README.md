@@ -1,7 +1,7 @@
 # Pokedex Showroom
 (img portada)
 
-https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpokeapi.co%2Fdocs%2Fv2%23pokemon
+GET /netlify/:projectId-511dc1c6-6b40-4d62-a5ea-992e20773cea
 
 ÍNDICE:
 Página única
