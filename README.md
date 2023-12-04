@@ -1,5 +1,5 @@
 # Pokedex Showroom
-https://github.com/DenaRi97/PokemonApi/assets/149384086/ec2ad5f0-5a93-420c-9e09-db766937a71e
+![POKEAPI](https://github.com/DenaRi97/PokemonApi/assets/149384086/fe2db5ab-bebc-46f1-9122-39f880bd54ba)
 
 #### INSIGNIAS:
 [![Netlify Status](https://api.netlify.com/api/v1/badges/511dc1c6-6b40-4d62-a5ea-992e20773cea/deploy-status)](https://app.netlify.com/sites/pokedexshowapi/deploys)
