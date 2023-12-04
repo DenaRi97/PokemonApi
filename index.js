@@ -37,10 +37,14 @@ function fetchPoke(id) {
 // fetchPoke(1) //Pintar en consola objeto que he buscado
 
 //Función que va a buscar los objetos en el json
-function fetchPokemons(offset, limit) {  //al sustituir todos los number por offset y limit hace que cicle entre todos los items en vez de siempre los mismos. Estan a 20 los dos en el api, pueden variar.
-    for (let i = offset; i <= offset + limit; i++) { //Bucle usando funcion singular anterior
-        fetchPoke(i)
+function fetchPokemons(offset, limit) {
+    const pokemonPromises = [];
+
+    for (let i = offset; i <= offset + limit; i++) {
+        pokemonPromises.push(fetchPoke(i));
     }
+
+    return Promise.all(pokemonPromises);
 }
 
 //Funcion para representar los objetos del json
@@ -87,6 +91,11 @@ function removeChildNodes(parent) {
 
 // Llamada a la función fetchPokemons
 fetchPokemons(offset, limit)
+  .then((pokemons) => {
+    // Ordena los Pokémon por su ID antes de crear los elementos en el DOM
+    pokemons.sort((a, b) => a.id - b.id);
+    pokemons.forEach((pokemon) => createPoke(pokemon));
+  });
  
 
 

@@ -70,6 +70,7 @@ body {
   .img-container {
     background-repeat: no-repeat;
     background-position: center;
+    background-image: url(IMG/blob\ \(1\).svg);
   }
   
   .pokemon-block p {
@@ -145,17 +146,16 @@ body {
     border-radius: 14px;
     height: 15%;
     cursor: pointer;
+    font-style: oblique;
+    font-weight: 300;
+    color: white;
   }
-
   #spin-mew{
     width: 5rem;
   }
 
-a{
-    color: black;
-}
-a:hover{
-    color: white;
+.page-link {
+  color:white;
 }
 
 /*---RESPONSIVE-----*/
