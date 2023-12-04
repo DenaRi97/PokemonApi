@@ -1,19 +1,54 @@
 body {
-    background: rgb(85, 144, 189);
-    background: linear-gradient(
-      90deg,
-      rgba(85, 144, 189, 1) 0%,
-      rgba(108, 183, 240, 1) 54%,
-      rgba(182, 216, 242, 1) 82%
-    );
+    padding: 0;
+    margin-inline: 1vw;
+    box-sizing: border-box; 
+    background: rgb(37,89,164);
+    background: radial-gradient(circle, rgba(37,89,164,1) 0%, rgba(124,176,255,1) 40%, rgba(170,204,255,1) 60%, rgba(255,255,255,1) 89%);
     text-align: center;
     font-family: Haettenschweiler, sans-serif;
   }
-  
+  /*---Header---*/
   h1 {
     color: white;
   }
-  
+  h2{
+    color: wheat;
+    font-size: 18px;
+  }
+  header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    margin-inline: 30%;
+    border-radius: 10rem;
+  }
+  .tittle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .tittle img{
+    width: 8%;
+  }
+/*--- Define a CSS keyframe animation named 'spin'---*/
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+/* Apply the 'spin' animation to the image */
+#spinning-img{
+  animation: spin 8s linear infinite; /* You can adjust the duration and timing function */
+}
+
+  /*---Body-API---*/
+
   .pokemon-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -30,11 +65,9 @@ body {
     border-radius: 10px;
     padding: 10px;
     background-color: white;
-    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
   }
   
   .img-container {
-    background-image: url("./blob.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -72,10 +105,7 @@ body {
     transform-style: preserve-3d;
   }
   
-  .flip-card:hover .card-container {
-    transform: rotateY(180deg);
-  }
-  
+
   .pokemon-block,
   .pokemon-block-back {
     width: 100%;
@@ -89,12 +119,6 @@ body {
     top: 0%;
   }
   
-  .stat-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    text-align: left;
-  }
-
   .pagination{
     width: 90%;
     margin-left: auto;
@@ -102,6 +126,7 @@ body {
     margin-bottom: 50px;
   }
 
+  /*---Buttons---*/
   .pages{
     list-style: none;
     display: flex;
@@ -120,6 +145,11 @@ body {
     border-radius: 15px;
     cursor:pointer;
   }
+
+  #spin-mew{
+    width: 10%;
+  }
+
 a{
     color: black;
 }

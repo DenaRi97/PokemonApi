@@ -30,10 +30,11 @@ function fetchPoke(id) {
      .then(res => res.json())
      .then(data => {
         createPoke(data)
+        console.log(data)
      })
 }
 
-fetchPoke(1) //Pintar en consola objeto que he buscado
+// fetchPoke(1) //Pintar en consola objeto que he buscado
 
 //Función que va a buscar los objetos en el json
 function fetchPokemons(offset, limit) {  //al sustituir todos los number por offset y limit hace que cicle entre todos los items en vez de siempre los mismos. Estan a 20 los dos en el api, pueden variar.
