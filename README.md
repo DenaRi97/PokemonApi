@@ -1,7 +1,7 @@
 # Pokedex Showroom
 (img portada)
 
-(insignias)
+https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpokeapi.co%2Fdocs%2Fv2%23pokemon
 
 ÍNDICE:
 Página única
